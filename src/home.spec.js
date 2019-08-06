@@ -1,30 +1,25 @@
-const path = require("path");
+const mockAxios = require("axios");
 
-const { Polly } = require("@pollyjs/core");
-const { setupPolly } = require("setup-polly-jest");
-const NodeHttpAdapter = require("@pollyjs/adapter-node-http");
-const FSPersister = require("@pollyjs/persister-fs");
+const { getHome } = require("./home");
 
-Polly.register(NodeHttpAdapter);
-Polly.register(FSPersister);
-
-const { home } = require("./home");
-
-setupPolly({
-  adapters: ["node-http"],
-  persister: "fs",
-  persisterOptions: {
-    fs: {
-      recordingsDir: path.resolve(__dirname, "../__recordings__")
-    }
-  }
-});
+jest.mock("axios");
 
 describe("home", () => {
-  it("should return home", async () => {
-    const result = await home();
+  it("should call photos and posts API", async () => {
+    mockAxios.get.mockImplementation(() =>
+      Promise.resolve({
+        data: { property: "value" }
+      })
+    );
 
-    expect(result.posts[0].id).toBe(1);
-    expect(result.photos[0].id).toBe(1);
+    const home = await getHome();
+
+    expect(home).toEqual({
+      posts: { property: "value" },
+      photos: { property: "value" }
+    });
+    expect(mockAxios.get).toHaveBeenCalledTimes(2);
+    expect(mockAxios.get).toHaveBeenCalledWith("/posts?_start=0&_limit=5");
+    expect(mockAxios.get).toHaveBeenCalledWith("/photos?_start=0&_limit=5");
   });
 });

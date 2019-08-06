@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Integration: home should not change 1`] = `
+Object {
+  "photos": Array [
+    Object {
+      "albumId": 1,
+      "id": 1,
+      "thumbnailUrl": "https://via.placeholder.com/150/92c952",
+      "title": "accusamus beatae ad facilis cum similique qui sunt",
+      "url": "https://via.placeholder.com/600/92c952",
+    },
+    Object {
+      "albumId": 1,
+      "id": 2,
+      "thumbnailUrl": "https://via.placeholder.com/150/771796",
+      "title": "reprehenderit est deserunt velit ipsam",
+      "url": "https://via.placeholder.com/600/771796",
+    },
+    Object {
+      "albumId": 1,
+      "id": 3,
+      "thumbnailUrl": "https://via.placeholder.com/150/24f355",
+      "title": "officia porro iure quia iusto qui ipsa ut modi",
+      "url": "https://via.placeholder.com/600/24f355",
+    },
+    Object {
+      "albumId": 1,
+      "id": 4,
+      "thumbnailUrl": "https://via.placeholder.com/150/d32776",
+      "title": "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
+      "url": "https://via.placeholder.com/600/d32776",
+    },
+    Object {
+      "albumId": 1,
+      "id": 5,
+      "thumbnailUrl": "https://via.placeholder.com/150/f66b97",
+      "title": "natus nisi omnis corporis facere molestiae rerum in",
+      "url": "https://via.placeholder.com/600/f66b97",
+    },
+  ],
+  "posts": Array [
+    Object {
+      "body": "quia et suscipit
+suscipit recusandae consequuntur expedita et cum
+reprehenderit molestiae ut ut quas totam
+nostrum rerum est autem sunt rem eveniet architecto",
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "userId": 1,
+    },
+    Object {
+      "body": "est rerum tempore vitae
+sequi sint nihil reprehenderit dolor beatae ea dolores neque
+fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis
+qui aperiam non debitis possimus qui neque nisi nulla",
+      "id": 2,
+      "title": "qui est esse",
+      "userId": 1,
+    },
+    Object {
+      "body": "et iusto sed quo iure
+voluptatem occaecati omnis eligendi aut ad
+voluptatem doloribus vel accusantium quis pariatur
+molestiae porro eius odio et labore et velit aut",
+      "id": 3,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "userId": 1,
+    },
+    Object {
+      "body": "ullam et saepe reiciendis voluptatem adipisci
+sit amet autem assumenda provident rerum culpa
+quis hic commodi nesciunt rem tenetur doloremque ipsam iure
+quis sunt voluptatem rerum illo velit",
+      "id": 4,
+      "title": "eum et est occaecati",
+      "userId": 1,
+    },
+    Object {
+      "body": "repudiandae veniam quaerat sunt sed
+alias aut fugiat sit autem sed est
+voluptatem omnis possimus esse voluptatibus quis
+est aut tenetur dolor neque",
+      "id": 5,
+      "title": "nesciunt quas odio",
+      "userId": 1,
+    },
+  ],
+}
+`;
