@@ -10,22 +10,21 @@ Polly.register(FSPersister);
 
 const { home } = require("./home");
 
-describe("Polly home", () => {
-  setupPolly({
-    adapters: ["node-http"],
-    persister: "fs",
-    persisterOptions: {
-      fs: {
-        recordingsDir: path.resolve(__dirname, "../__recordings__")
-      }
+setupPolly({
+  adapters: ["node-http"],
+  persister: "fs",
+  persisterOptions: {
+    fs: {
+      recordingsDir: path.resolve(__dirname, "../__recordings__")
     }
-  });
+  }
+});
 
-  describe("home", () => {
-    it("should return home", async () => {
-      const result = await home();
+describe("home", () => {
+  it("should return home", async () => {
+    const result = await home();
 
-      expect(result.id).toBe("HOME_fr_web");
-    });
+    expect(result.posts[0].id).toBe(1);
+    expect(result.photos[0].id).toBe(1);
   });
 });

@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const apiClient = axios.create({
-  baseURL: "http://localhost:3333",
+  baseURL: "https://jsonplaceholder.typicode.com",
   timeout: 5000
 });
 
